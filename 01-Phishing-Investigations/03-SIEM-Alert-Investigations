@@ -1,0 +1,36 @@
+# SIEM Alert Investigation – Brute Force Attempt
+
+**Alert Name:** Multiple Failed Logins  
+**Platform:** Microsoft Sentinel  
+**Severity:** High  
+**Date:** 2025-02-16  
+
+---
+
+## 🧩 Summary
+Sentinel generated an alert for multiple failed sign-ins from a single external IP towards an admin account.
+
+---
+
+## 🔍 Findings
+### Failed login attempts
+- Username: `admin@company.com`
+- Attempts: 67 attempts within 5 minutes
+- Source IP: `185.231.117.9`
+- Geo-location: Outside normal login region
+
+### KQL Query Used
+```kql
+SigninLogs
+| where ResultType == "50053" or ResultType == "50126"
+| summarize count() by IPAddress, UserPrincipalName, bin(TimeGenerated, 5m)
+
+#### IP Reputation
+@ Marked malicious on AbuseIPDB
+@ Associated with brute-force botnets
+
+##### Response Actions
+! Locked affected account
+! Forced password reset
+! Blocked IP at firewall level
+! Enabled conditional access rule
