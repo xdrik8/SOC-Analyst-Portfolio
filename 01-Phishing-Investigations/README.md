@@ -1,51 +1,42 @@
-# Phishing Investigation Report – Case 01
 
-**Date:** 2025-02-15  
-**Analyst:** Indira  
-**Category:** Phishing Email Analysis
 
----
-
-## 📌 Summary
-A suspicious email was reported by a user claiming they received an urgent request to update their bank details. The email contained a malicious URL redirecting to a credential-harvesting phishing site.
-
----
-
-## 📨 Email Header Analysis
-- Sender: `support@account-securebank.com`
-- Envelope From: Unknown SMTP server
-- SPF: **Fail**
-- DKIM: Not signed
-- Return-Path: Different from sender domain
-
-**Indicators of compromise:**
-- Domain is newly registered  
-- Suspicious URL shortener present  
-- Mismatch between display name and actual email  
+Each folder contains:
+- Case studies  
+- Investigation notes  
+- Screenshots  
+- Reports  
+- Scripts  
+- Documentation  
 
 ---
 
-## 🔗 Malicious URL Analysis
-Tools used:
-- VirusTotal  
-- URLScan  
-- Talos Intelligence  
-
-**URL Result:**  
-- 12/90 engines flagged as malicious  
-- Hosted on Russian VPS  
-- Contains HTML credential-stealing script  
-
----
-
-## ✔ Conclusion
-**Confirmed Phishing Attack**  
-The email attempted to steal banking credentials using a fake login page.
+## 🔧 Skills Demonstrated
+- **SIEM Tools**: Splunk, Microsoft Sentinel, Elastic  
+- **Querying Languages**: KQL, SPL  
+- **Incident Response**  
+- **Phishing Analysis**  
+- **Malware Behavior Analysis**  
+- **Wireshark & Network Forensics**  
+- **Threat Intelligence (VirusTotal, AbuseIPDB, Talos)**  
+- **Sysmon Event Log Analysis**  
+- **Python & PowerShell for automation**
 
 ---
 
-## 🛡 Recommendations
-- Block sender domain  
-- Add domain to email security filter  
-- Notify affected users  
-- Conduct phishing awareness training  
+## 🧪 Hands-On Projects
+✔ Phishing Attack Investigation  
+✔ Malware Triage (VT, Any.Run)  
+✔ Ransomware Behavior Observation  
+✔ Brute-Force Authentication Detection  
+✔ Windows Event Log Analysis  
+✔ Suspicious Network Traffic Review (PCAP)  
+✔ TI Case Studies  
+✔ KQL Query Collections  
+
+---
+
+## 📫 Contact
+**LinkedIn:** *add your link here*  
+**Email:** *add your email here*  
+
+---
